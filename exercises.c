@@ -41,8 +41,17 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+List* crea_lista() 
+{
    List* L = create_list();
+   int *dato;
+   for (int i = 0; i < 10; i++)
+     {
+       dato = (int*)malloc(sizeof(int));
+       *dato = i+1;
+       pushBack(L, dato);
+     }
+  
    return L;
 }
 
