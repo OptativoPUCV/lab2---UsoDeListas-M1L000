@@ -53,7 +53,7 @@ List* crea_lista()
      }
    return L;
 }
-
+ 
 /*
 Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
@@ -63,11 +63,11 @@ int sumaLista(List *L)
 {
   int suma = 0;
   int *dato;
-  dato = (int*)first(L);
+  dato = first(L);
   while(dato != NULL)
     {
       suma += *dato;
-      dato = (int*)next(L);
+      dato = next(L);
     }
    return suma;
 }
@@ -104,19 +104,6 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
-  Stack* Paux = create_stack();
-  void *dato;
-  while((dato = pop(P1)) != NULL)
-    {
-      push(Paux, dato);
-    }
-  while((dato = pop(Paux)) != NULL)
-    {
-      push(P2, dato);
-      push(P1, dato);
-      
-    }
-  
   
 }
 
