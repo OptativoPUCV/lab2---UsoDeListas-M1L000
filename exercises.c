@@ -145,15 +145,15 @@ int parentesisBalanceados(char *cadena)
     {
       if(cadena[j] == '(')
       {
-        if(top(P1 != ')') return 0;
+        if(top(P1) != ')') return 0;
       }
       else if(cadena[j] == '[')
       {
-        if(top(P1 != ']') return 0;
+        if(top(P1) != ']') return 0;
       }
       else if(cadena[j] == '{')
       {
-        if(top(P1 != '}') return 0;
+        if(top(P1) != '}') return 0;
       }
       j++;
     }

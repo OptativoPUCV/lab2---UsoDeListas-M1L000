@@ -292,3 +292,31 @@ exercises.c:157:7: error: expected expression before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 89a4cb4
+Thu 21 Mar 2024 09:06:08 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:139:21: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  139 |       push(P1,cadena[i]);
+      |               ~~~~~~^~~
+      |                     |
+      |                     char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:148:20: error: comparison between pointer and integer [-Werror]
+  148 |         if(top(P1) != ')') return 0;
+      |                    ^~
+exercises.c:152:20: error: comparison between pointer and integer [-Werror]
+  152 |         if(top(P1) != ']') return 0;
+      |                    ^~
+exercises.c:156:20: error: comparison between pointer and integer [-Werror]
+  156 |         if(top(P1) != '}') return 0;
+      |                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+c776b6f
