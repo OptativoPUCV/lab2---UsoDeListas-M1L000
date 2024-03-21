@@ -49,7 +49,7 @@ List* crea_lista()
      {
        dato = (int*)malloc(sizeof(int));
        *dato = i+1;
-       pushBack(L, dato);
+       pushBack(L, dato);2
      }
    return L;
 }
@@ -104,6 +104,16 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
+  Stack* Paux = create_stack();
+  void *dato;
+  while((dato = pop(P1)) != NULL)
+    {
+      push(Paux, dato);
+    }
+  while((dato = pop(Paux)) != NULL)
+    {
+      push(P2, dato);
+    }
   
 }
 
@@ -114,7 +124,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
+int parentesisBalanceados(char *cadena) 
+{
+  
    return 0;
 }
 

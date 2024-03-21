@@ -32,3 +32,20 @@ Thu 21 Mar 2024 12:06:59 AM UTC:
  tests:  3|2
 total_score: 40/70
 8d37f2e
+Thu 21 Mar 2024 01:15:41 AM UTC: 
+ exercises.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:26: error: statement with no effect [-Werror=unused-value]
+   52 |        pushBack(L, dato);2
+      |                          ^
+exercises.c:52:27: error: expected ‘;’ before ‘}’ token
+   52 |        pushBack(L, dato);2
+      |                           ^
+      |                           ;
+   53 |      }
+      |      ~                     
+cc1: all warnings being treated as errors
+Compilation failed
+f8a102f
