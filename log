@@ -128,3 +128,85 @@ Thu 21 Mar 2024 08:48:57 PM UTC:
  tests:  4|1
 total_score: 50/70
 4b186ae
+Thu 21 Mar 2024 09:05:16 PM UTC: 
+ exercises.c | 26 +++++++++++++++++++++++++-
+ 1 file changed, 25 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:139:21: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  139 |       push(P1,cadena[i]);
+      |               ~~~~~~^~~
+      |                     |
+      |                     char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:148:19: error: comparison between pointer and integer [-Werror]
+  148 |         if(top(P1 != ')') return 0;
+      |                   ^~
+exercises.c:148:19: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Werror=int-conversion]
+  148 |         if(top(P1 != ')') return 0;
+      |                ~~~^~~~~~
+      |                   |
+      |                   int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:148:26: error: expected ‘)’ before ‘return’
+  148 |         if(top(P1 != ')') return 0;
+      |           ~              ^~~~~~~
+      |                          )
+exercises.c:149:7: error: expected expression before ‘}’ token
+  149 |       }
+      |       ^
+exercises.c:152:19: error: comparison between pointer and integer [-Werror]
+  152 |         if(top(P1 != ']') return 0;
+      |                   ^~
+exercises.c:152:19: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Werror=int-conversion]
+  152 |         if(top(P1 != ']') return 0;
+      |                ~~~^~~~~~
+      |                   |
+      |                   int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:152:26: error: expected ‘)’ before ‘return’
+  152 |         if(top(P1 != ']') return 0;
+      |           ~              ^~~~~~~
+      |                          )
+exercises.c:153:7: error: expected expression before ‘}’ token
+  153 |       }
+      |       ^
+exercises.c:156:19: error: comparison between pointer and integer [-Werror]
+  156 |         if(top(P1 != '}') return 0;
+      |                   ^~
+exercises.c:156:19: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Werror=int-conversion]
+  156 |         if(top(P1 != '}') return 0;
+      |                ~~~^~~~~~
+      |                   |
+      |                   int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:156:26: error: expected ‘)’ before ‘return’
+  156 |         if(top(P1 != '}') return 0;
+      |           ~              ^~~~~~~
+      |                          )
+exercises.c:157:7: error: expected expression before ‘}’ token
+  157 |       }
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+c08757f
