@@ -51,7 +51,6 @@ List* crea_lista()
        *dato = i+1;
        pushBack(L, dato);
      }
-  
    return L;
 }
 
@@ -60,7 +59,8 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
+int sumaLista(List *L) 
+{
    return 0;
 }
 
