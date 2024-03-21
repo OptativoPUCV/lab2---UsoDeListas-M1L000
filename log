@@ -67,3 +67,17 @@ Thu 21 Mar 2024 01:51:25 AM UTC:
  tests:  3|2
 total_score: 40/70
 b0ab463
+Thu 21 Mar 2024 03:52:22 PM UTC: 
+ exercises.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+test.c: In function ‘copia_pila’:
+exercises.c:116:14: error: ‘elem’ is used uninitialized [-Werror=uninitialized]
+  116 |   while(elem != NULL)
+      |              ^
+exercises.c:109:14: error: ‘dato’ is used uninitialized [-Werror=uninitialized]
+  109 |   while(dato != NULL)
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+b27271e
